@@ -1,12 +1,12 @@
-# OpenApiToRefit
+# OpenApi to Refit
 
-A Simple tool to generate C# client from OpenApi fortmat using [Refit: The automatic type-safe REST library](https://github.com/reactiveui/refit).
+A simple tool to generate C# clients from OpenApi fortmat using [Refit: The automatic type-safe REST library](https://github.com/reactiveui/refit).
 
-## How to build
-1. Open the sln in visual studio 2022
-2. Build the project
-3. Run the genearted .exe with some input args
-
+## How to use
+1. Download a zip file from releases.
+2. Unzip and open a powershell inside the directory.
+3. Use cli commands to generate client. 
+4. It will generate a .cs file with provided name inside root dir or defined one.
 ```
 Options:
   -i|--interface-name <CLASS_NAME>            Interface name
@@ -23,3 +23,6 @@ Example:
 ``` 
 .\OpenApiToRefit.Cli.exe -i PetStoreProxyApi -n PetStore -u https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.yaml
 ```
+## How to build
+1. Open the sln in visual studio 2022
+2. Build the project

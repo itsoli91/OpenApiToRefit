@@ -38,12 +38,15 @@ public class Program
 
     [Option(ShortName = "optional-parameters", Description = "Generate Optional Parameters",
         LongName = "optional-parameters")]
-
     public bool GenerateOptionalParameters { get; } = true;
 
     public async Task OnExecute()
     {
-        var document = await OpenApiYamlDocument.FromUrlAsync(OpenApiUrl);
+        OpenApiDocument? document;
+
+        if (OpenApiUrl.EndsWith(".yml") || OpenApiUrl.EndsWith(".yaml"))
+            document = await OpenApiYamlDocument.FromUrlAsync(OpenApiUrl);
+        else document = await OpenApiDocument.FromUrlAsync(OpenApiUrl);
 
         var settings = new CSharpClientGeneratorSettings
         {
