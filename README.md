@@ -25,4 +25,4 @@ Example:
 ```
 ## How to build
 1. Open the sln in visual studio 2022
-2. Build the project
+2. Build the sln.
