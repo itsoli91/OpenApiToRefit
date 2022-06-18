@@ -16,11 +16,11 @@ public class Program
         => CommandLineApplication.Execute<Program>(args);
 
 
-    [Option(ShortName = "i", Description = "Interface name", LongName = "interface-name")]
+    [Option(ShortName = "i", Description = "The Interface name.", LongName = "interface-name")]
     [Required]
     public string ClassName { get; } = null!;
 
-    [Option(ShortName = "n", Description = "The namespace for generated interface", LongName = "namespace")]
+    [Option(ShortName = "n", Description = "The namespace for generated interface.", LongName = "namespace")]
     [Required]
     public string Namespace { get; } = null!;
 
@@ -28,15 +28,13 @@ public class Program
     [Required]
     public string OpenApiUrl { get; } = null!;
 
-    [Option(ShortName = "o", Description = "The url of the OpenApi.", LongName = "output-path")]
+    [Option(ShortName = "o", Description = "The output path of generated files?", LongName = "output-path")]
     public string? OutputPath { get; } = string.Empty;
 
-
-    [Option(ShortName = "nullable", Description = "Generate nullable reference types", LongName = "nullable")]
-
+    [Option(ShortName = "nullable", Description = "Generate nullable reference types?", LongName = "nullable")]
     public bool GenerateNullableReferenceTypes { get; } = true;
 
-    [Option(ShortName = "optional-parameters", Description = "Generate Optional Parameters",
+    [Option(ShortName = "optional-parameters", Description = "Generate Optional Parameters.",
         LongName = "optional-parameters")]
     public bool GenerateOptionalParameters { get; } = true;
 
