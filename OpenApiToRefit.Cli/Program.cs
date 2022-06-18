@@ -40,6 +40,14 @@ public class Program
 
     public async Task OnExecute()
     {
+        var templateDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Templates");
+        Console.WriteLine($"Path is: {templateDirectory}");
+        var files = Directory.GetFiles(templateDirectory).ToList();
+        foreach (var file in files)
+        {
+            Console.WriteLine(file);
+        }
+
         OpenApiDocument? document;
 
         if (OpenApiUrl.EndsWith(".yml") || OpenApiUrl.EndsWith(".yaml"))
@@ -57,13 +65,13 @@ public class Program
             {
                 GenerateNullableReferenceTypes = GenerateNullableReferenceTypes,
                 GenerateDataAnnotations = false,
-                TemplateDirectory = "./Templates",
+                TemplateDirectory = templateDirectory,
                 Namespace = Namespace,
                 JsonLibrary = CSharpJsonLibrary.SystemTextJson,
             },
             CodeGeneratorSettings =
             {
-                TemplateDirectory = "./Templates"
+                TemplateDirectory = templateDirectory
             }
         };
         var cSharpClientGenerator = new CSharpClientGenerator(document, settings);
