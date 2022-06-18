@@ -34,19 +34,13 @@ public class Program
     [Option(ShortName = "nullable", Description = "Generate nullable reference types?", LongName = "nullable")]
     public bool GenerateNullableReferenceTypes { get; } = true;
 
-    [Option(ShortName = "optional-parameters", Description = "Generate Optional Parameters.",
+    [Option(ShortName = "optional-parameters", Description = "Generate Optional Parameters?",
         LongName = "optional-parameters")]
     public bool GenerateOptionalParameters { get; } = true;
 
     public async Task OnExecute()
     {
         var templateDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Templates");
-        Console.WriteLine($"Path is: {templateDirectory}");
-        var files = Directory.GetFiles(templateDirectory).ToList();
-        foreach (var file in files)
-        {
-            Console.WriteLine(file);
-        }
 
         OpenApiDocument? document;
 
