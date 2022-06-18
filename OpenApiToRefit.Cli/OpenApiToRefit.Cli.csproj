@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackAsTool>true</PackAsTool>
-		<PackageVersion>1.0.1</PackageVersion>
+		<PackageVersion>1.0.2</PackageVersion>
 		<ToolCommandName>OpenApiToRefit</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<Authors>Mohammad Olfatmiri</Authors>
@@ -20,8 +20,12 @@
 		<StartupObject>OpenApiToRefit.Cli.Program</StartupObject>
 	</PropertyGroup>
 	<ItemGroup>
-		<EmbeddedResource CopyToOutputDirectory="Always" Include="Templates\*.liquid" />
-
+		<EmbeddedResource CopyToOutputDirectory="Always" Include="Templates\*.liquid"  />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Templates\*.liquid" Pack="true">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.0.1" />
