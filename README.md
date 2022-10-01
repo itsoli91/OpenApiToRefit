@@ -5,7 +5,7 @@ A simple tool to generate C# clients from OpenApi format using [Refit: The autom
 ## How to use
 Open a powershell or cmd and run this command
 ```
-dotnet tool install --global OpenApiToRefit.Cli --version 1.0.3
+dotnet tool install --global OpenApiToRefit.Cli --version 1.0.4
 ```
 Then you can use cli like this:
 ``` 
