@@ -20,7 +20,7 @@
 		<StartupObject>OpenApiToRefit.Cli.Program</StartupObject>
 	</PropertyGroup>
 	<ItemGroup>
-		<EmbeddedResource CopyToOutputDirectory="Always" Include="Templates\*.liquid"  />
+		<EmbeddedResource CopyToOutputDirectory="Always" Include="Templates\*.liquid" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Templates\*.liquid" Pack="true">
@@ -29,8 +29,8 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.0.1" />
-		<PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.16.1" />
-		<PackageReference Include="NSwag.Core.Yaml" Version="13.16.1" />
+		<PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.17.0" />
+		<PackageReference Include="NSwag.Core.Yaml" Version="13.17.0" />
 		<PackageReference Include="Refit" Version="6.3.2" />
 	</ItemGroup>
 
