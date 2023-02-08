@@ -71,7 +71,7 @@ public class Program
         var cSharpClientGenerator = new CSharpClientGenerator(document, settings);
         var source = cSharpClientGenerator.GenerateFile(ClientGeneratorOutputType.Contracts);
 
-        var path = $"I{ClassName}.cs";
+        var path = $"{ClassName}.cs";
         if (!string.IsNullOrEmpty(OutputPath))
             path = Path.Combine(OutputPath, path);
 

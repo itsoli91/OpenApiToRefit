@@ -4,7 +4,7 @@
 /// </summary>
 {% endif -%}
 {% for parameter in operation.Parameters -%}
-{%     if parameter.HasDescription -%}
+{%     if parameter.HasDescription and parameter.IsDeprecated==false -%}
 /// <param name="{{ parameter.VariableIdentifier }}">{{ parameter.Description | csharpdocs }}</param>
 {%     endif -%}
 {% endfor -%}
