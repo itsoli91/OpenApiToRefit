@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackAsTool>true</PackAsTool>
-		<PackageVersion>1.0.6</PackageVersion>
+		<PackageVersion>1.1.0</PackageVersion>
 		<ToolCommandName>OpenApiToRefit</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<Authors>Mohammad Olfatmiri</Authors>
@@ -28,9 +28,9 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.0.1" />
-		<PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.17.0" />
-		<PackageReference Include="NSwag.Core.Yaml" Version="13.17.0" />
+		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.0.2" />
+		<PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.19.0" />
+		<PackageReference Include="NSwag.Core.Yaml" Version="13.19.0" />
 		<PackageReference Include="Refit" Version="6.3.2" />
 	</ItemGroup>
 

@@ -7,14 +7,12 @@ using NSwag.CodeGeneration;
 using NSwag.CodeGeneration.CSharp;
 
 // ReSharper disable ReplaceAutoPropertyWithComputedProperty
-
 namespace OpenApiToRefit.Cli;
 
 public class Program
 {
     public static int Main(string[] args)
         => CommandLineApplication.Execute<Program>(args);
-
 
     [Option(ShortName = "i", Description = "The Interface name.", LongName = "interface-name")]
     [Required]
@@ -38,6 +36,9 @@ public class Program
         LongName = "optional-parameters")]
     public bool GenerateOptionalParameters { get; } = true;
 
+    [Option(ShortName = "base-interface", Description = "return IApiResponse instead of T?", LongName = "base-interface")]
+    public bool ReturnIApiResponse { get; } = false;
+
     public async Task OnExecute()
     {
         var templateDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Templates");
@@ -55,13 +56,16 @@ public class Program
             GenerateExceptionClasses = false,
             GenerateClientInterfaces = true,
             GenerateOptionalParameters = GenerateOptionalParameters,
+            WrapResponses = ReturnIApiResponse,
+            ResponseClass = "IApiResponse",
+            GenerateResponseClasses = !ReturnIApiResponse,
             CSharpGeneratorSettings =
             {
                 GenerateNullableReferenceTypes = GenerateNullableReferenceTypes,
                 GenerateDataAnnotations = false,
                 TemplateDirectory = templateDirectory,
                 Namespace = Namespace,
-                JsonLibrary = CSharpJsonLibrary.SystemTextJson,
+                JsonLibrary = CSharpJsonLibrary.SystemTextJson
             },
             CodeGeneratorSettings =
             {
