@@ -17,8 +17,9 @@ Options:
   -n|--namespace <NAMESPACE>                  The namespace for generated interface.
   -u|--openapi-url <OPEN_API_URL>             The url of the OpenApi.
   -o|--output-path <OUTPUT_PATH>              The output path of generated files.
-  -nullable|--nullable                        Generate nullable reference types?
-  -optional-parameters|--optional-parameters  Generate Optional Parameters?
+  --nullable                                  Generate nullable reference types?
+  --optional-parameters 					  Generate Optional Parameters?
+  --base-interface							  Return IApiResponse instead of T
   -?|-h|--help                                Show help information.
   ```
 
