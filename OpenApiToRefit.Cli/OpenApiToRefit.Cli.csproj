@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackAsTool>true</PackAsTool>
-		<PackageVersion>1.1.0</PackageVersion>
+		<PackageVersion>1.1.1</PackageVersion>
 		<ToolCommandName>OpenApiToRefit</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<Authors>Mohammad Olfatmiri</Authors>
