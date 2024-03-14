@@ -1,6 +1,6 @@
 # OpenApi to Refit
 
-A simple tool to generate C# clients from OpenApi format using [Refit: The automatic type-safe REST library](https://github.com/reactiveui/refit).
+A simple tool to generate C# clients from OpenApi(swagger) format using [Refit: The automatic type-safe REST library](https://github.com/reactiveui/refit).
 
 ## How to use
 Open a powershell or cmd and run this command
