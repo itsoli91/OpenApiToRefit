@@ -2,14 +2,14 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFrameworks>net462;netstandard2.0;net6.0;net8.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackAsTool>true</PackAsTool>
-		<PackageVersion>1.1.1</PackageVersion>
+		<PackageVersion>1.1.2</PackageVersion>
 		<ToolCommandName>OpenApiToRefit</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
-		<Authors>Mohammad Olfatmiri</Authors>
+		<Authors>Mohammad (Oli) Olfatmiri</Authors>
 		<Description>A simple tool to generate C# clients from OpenApi format using Refit: The automatic type-safe REST library.</Description>
 		<PackageTags>OpenApi;Refit;</PackageTags>
 		<MinVerTagPrefix>v</MinVerTagPrefix>
@@ -28,10 +28,10 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.0.2" />
-		<PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.20.0" />
-		<PackageReference Include="NSwag.Core.Yaml" Version="13.20.0" />
-		<PackageReference Include="Refit" Version="7.0.0" />
+		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.1" />
+		<PackageReference Include="NSwag.CodeGeneration.CSharp" Version="14.1.0" />
+		<PackageReference Include="NSwag.Core.Yaml" Version="14.1.0" />
+		<PackageReference Include="Refit" Version="7.2.0" />
 	</ItemGroup>
 
 	<ItemGroup>

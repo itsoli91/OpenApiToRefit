@@ -5,7 +5,7 @@ A simple tool to generate C# clients from OpenApi(swagger) format using [Refit: 
 ## How to use
 Open a powershell or cmd and run this command
 ```
-dotnet tool install --global OpenApiToRefit.Cli --version 1.1.1
+dotnet tool install --global OpenApiToRefit.Cli --version 1.1.2
 ```
 Then you can use cli like this:
 ``` 

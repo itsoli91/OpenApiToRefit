@@ -36,7 +36,8 @@ public class Program
         LongName = "optional-parameters")]
     public bool GenerateOptionalParameters { get; } = true;
 
-    [Option(ShortName = "base-interface", Description = "return IApiResponse instead of T?", LongName = "base-interface")]
+    [Option(ShortName = "base-interface", Description = "return IApiResponse instead of T?",
+        LongName = "base-interface")]
     public bool ReturnIApiResponse { get; } = false;
 
     public async Task OnExecute()
@@ -77,9 +78,9 @@ public class Program
 
         var path = $"{ClassName}.cs";
         if (!string.IsNullOrEmpty(OutputPath))
-            path = Path.Combine(OutputPath, path);
+            path = Path.Combine(OutputPath!, path);
 
-        await using var sw = new StreamWriter(path, false, Encoding.UTF8);
+        using var sw = new StreamWriter(path, false, Encoding.UTF8);
         await sw.WriteLineAsync(source);
     }
 }
